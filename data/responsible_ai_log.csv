@@ -1,0 +1,6 @@
+Case_ID,Actual_Fault,AI_Initial_Diagnosis,Human_Corrected_Diagnosis,Review_Status,Reason_For_Correction
+C09,Dot1Q tag mismatch,Switch Trunk Encapsulation protocol failure (L2),Sub-interface dot1Q encapsulation ID mismatch on Router (L3),Edited,AI confused switch trunking with Router-on-a-Stick sub-interface.
+C06,NAT standard ACL misconfigured,ISP Uplink interface is down (L1),NAT ACL 1 is empty; traffic is not matched for translation (L3),Rejected,AI hallucinated physical layer fault instead of checking ACL config.
+C19,BPDUGuard violation,Defective Ethernet cable / Hardware failure (L1),BPDU received on PortFast enabled port triggered BPDUGuard (L2),Edited,AI suggested cable replacement for an err-disabled software state.
+C22,Missing guest isolation ACL,Configure separate DHCP pool for guest Wi-Fi,Apply Layer 4 ACL blocking guest subnet from private RFC1918 range,Rejected,AI solved IP addressing instead of resolving security isolation.
+C23,Missing switch default gateway,Configure 'ip route 0.0.0.0 0.0.0.0' on Switch,Configure 'ip default-gateway' command on Layer 2 Switch,Edited,AI gave Layer 3 routing command for a Layer 2 switch.
